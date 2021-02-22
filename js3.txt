@@ -1,0 +1,193 @@
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function which performs a calculation, and returns the result:</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(p1,p2,p3,p4) {
+  return p1*p2*p3*p4;
+}
+document.getElementById("demo").innerHTML = myFunction(4,3,2,1);
+</script>
+If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement:
+<script>
+var x = myFunction(4,3,2,1);
+document.getElementById("demo").innerHTML = x;
+
+function myFunction(a,b,c,d) {
+  return a*b*c*d;
+}
+</script>
+Why use functions:
+<script>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+document.getElementById("demo").innerHTML = toCelsius(86);
+</script>
+***toCelsius refers to the function object and toCelsius() refers to the function result.
+**without parenthesis()will return the function.
+<p>Accessing a function without () will return the function definition instead of the function result:</p>
+<p id="demo"></p>
+
+<script>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+document.getElementById("demo").innerHTML = toCelsius;
+</script>
+Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations:
+<script>
+var x = toCelsius(77);
+document.getElementById("demo").innerHTML =
+"The temperature is " + x + " Celsius";
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+} 
+</script>
+********
+<form>
+                 <td align = "right">Country</td>
+                 <td>
+                    <select name = "Country">
+                       <option value = "0" selected>[choose yours]</option>
+                       <option value = "1">Bangladesh</option>
+                       <option value = "2">Nepal</option>
+                       <option value = "3">INDIA</option>
+                       <option value = "4">Pakistan</option>
+                    </select>
+                 </td>
+              </form>
+              <br>
+              <form>
+                 <td align = "right"></td>
+                 <td><input type = "submit" value = "Submit" /></td>
+              </form>
+
+
+
+
+event:
+1.<button onclick="this.innerHTML=new Date().getFullYear()">The time is?</button>
+2.<p>Click the button to display the date.</p>
+
+<button onclick="clicked()">The Year is?</button>
+<p id="year"></p>
+
+<script>
+
+
+function clicked(){
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
+}
+</script>
+**Number method:
+1.<script>// tostring method
+var x = 123;
+document.getElementById("demo").innerHTML =
+  x.toString() + "<br>" +
+   (123).toString() + "<br>" +
+   (100 + 23).toString()+ "<br>" + (80+43).toString();
+</script>
+2.Exponential() method:
+<script>
+var x = 9.656;
+document.getElementById("demo").innerHTML =
+  x.toExponential() + "<br>" + 
+  x.toExponential(1) + "<br>" +
+  x.toExponential(2) + "<br>" + 
+  x.toExponential(3) + "<br>" +
+  x.toExponential(4) + "<br>" + 
+  x.toExponential(5) + "<br>" +
+  x.toExponential(6);
+</script>
+3.fixed method: toFixed is perfect working for money.
+<script>
+var x = 9.656;
+document.getElementById("demo").innerHTML =
+  x.toFixed(1) + "<br>" +
+  x.toFixed(2) + "<br>" +
+  x.toFixed(4) + "<br>" +
+  x.toFixed(6);
+</script>
+4. precesion method:
+<script>
+var x = 9.656;
+document.getElementById("demo").innerHTML = 
+  x.toPrecision() + "<br>" +
+  x.toPrecision(2) + "<br>" +
+  x.toPrecision(3) + "<br>" +
+  x.toPrecision(4) + "<br>" +
+  x.toPrecision(6);  
+</script>
+**Valueof() method is similar to number method.
+There are 3 JavaScript methods that can be used to convert variables to numbers:
+
+The Number() method
+The parseInt() method
+The parseFloat() method
+**Array:
+<script>
+var water = ["Mum", "Fresh", "Kinley", "Aquafina"];
+document.getElementById("demo").innerHTML = water;
+</script>
+var water = [
+ "Mum",
+ "Fresh", 
+ "Kinley",
+ "Aquafina"
+];
+**In array, using new keyword:
+<script>
+var water = new Array("Mum", "Fresh", "Kinley", "Aquafina");
+document.getElementById("demo").innerHTML = water;
+</script>
+Access element an array:
+1.var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+2.var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars[2];
+**changing an arrey element:
+var cars = ["Saab", "Volvo", "BMW"];
+cars[0] = "Opel";
+cars[4] = "Harrier"
+document.getElementById("demo").innerHTML = cars;
+**Array are object:
+var person = {firstName:"John", lastName:"Doe", age:46};
+document.getElementById("demo").innerHTML = person["age"];
+**Array element:
+<script>
+var fruits, text, fLen, i;
+fruits = ["Guava", "Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("demo").innerHTML = text;
+</script>
+**<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var first = fruits[3];
+document.getElementById("demo").innerHTML = first;
+</script>
+**Associative arrat:
+<script>
+var person = [];
+person[0] = "John";
+person[1] = "Doe";
+person[2] = 46; 
+document.getElementById("demo").innerHTML =
+person[0] + " " + person.length;
+</script>
+
+
+
+ 
+
